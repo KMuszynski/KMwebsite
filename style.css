@@ -1,0 +1,281 @@
+* {
+    /* color: black; */
+    
+}
+@font-face {
+    font-family: 'Vancouver Gothic';
+    src: url('fonts/Vancouver-Gothic.woff2') format('woff2'),
+         url('fonts/Vancouver-Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Porcine';
+    src: url('fonts/Porcine-Heavy.woff') format('woff'),
+         url('fonts/Porcine-Heavy.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Defining task bar section */
+
+.taskBar {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px;
+    color: white;
+    font: caption;
+    z-index: 9999;
+}
+.taskBar > a {
+    color: white;
+    text-decoration: none;
+    margin: 8px 18px;
+}
+#button-activated {
+    text-decoration: underline;
+}
+
+/* Defining title section */
+
+.title-image {
+    display: none;
+}
+.title {
+    margin-top: 40px;
+    padding: 10px 5px 5px 5px;
+    color: black;
+    background-color: #C8FFD4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title > * {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* Defining the about section */
+
+.about {
+    background-color: #FDFDBD;
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.about > * {
+    padding-bottom: 15px;
+}
+.about-text {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: #d1f2ff;
+    border-style: solid;
+    border-color: rgb(150, 165, 165);
+    box-shadow: 5px 10px;
+    padding: 5px;
+}
+.about-text > p {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 90%;
+    padding: 7px;
+}
+.about-text > b {
+    text-align: center;
+    margin: 0 auto;
+}
+.about-image {
+    display: block;
+    max-width: 50%;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+    box-shadow: 7px 10px;
+}
+b {
+    font-size: 120%;
+}
+
+/* Defining the projects section */
+
+.projects {
+    background-color: #dcdbff;
+    margin-left: 0;
+    width: 100%;
+}
+.projects-title {
+    background-color: #B1AFFF;
+    margin: 15px auto;
+    text-align: center;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 5px 10px;
+    font-family: 'Porcine', sans-serif;
+}
+.SwiftBoard-text {
+    width: 95%;
+    margin-left: 2.5%;
+    background-color: #edc6ff;
+    border-style: solid;
+    border-color: #b974da;
+    box-shadow: 5px 10px;
+    margin-bottom: 20px;
+}
+.SwiftBoard-text > p {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 90%;
+}
+.SwiftBoard-title {
+    margin-left: 10px;
+}
+.SwiftBoard-website-image {
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+/* Defining the CV section */
+
+.CV {
+    background-color: #ffffe0;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.CVTitle {
+    width: 100%;
+    background-color: #ffff8c;
+    margin: 15px auto;
+    text-align: center;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 5px 10px;
+    font-family: 'Porcine', sans-serif;
+}
+.CVText {
+    width: 95%;
+    margin: 0 auto;
+    background-color: #ffc2b3;
+    border-style: solid;
+    border-color: #d28673;
+    box-shadow: 5px 10px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 90%;
+    padding: 7px;
+    text-align: center;
+}
+.CVText > a > button {
+    background-color: #fe9191;
+    border-color: #ff6b6b;
+    border-radius: 5px;
+}
+.CV-image {
+    display: block;
+    max-width: 65%;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+    box-shadow: 7px 10px;
+    margin-top: 20px;
+}
+.CV-image:hover {
+    transform: translateY(4px);
+    box-shadow: 5px 8px;
+    opacity: 85%;
+    z-index: 0;
+}
+
+.img-viewer {
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999999;
+  background: rgb(0, 0, 0, .9);
+}
+#img-view-activated {
+    display: block;
+}
+.img-viewer > img {
+  max-width: 92%;
+  max-height: 92%;
+  width: auto;
+  height: auto;
+  margin: auto;
+  z-index: 999999999;
+  margin-left: 3%;
+  margin-top: auto;
+}
+.img-viewer > a {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  float: right;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  margin: auto;
+  justify-content: center;
+}
+
+/* Defining the contact section */
+
+.contact {
+    background-color: #C8FFD4;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.contactTitle {
+    width: 100%;
+    background-color: #79ffd2;
+    margin: 15px auto;
+    text-align: center;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 5px 10px;
+    font-family: 'Porcine', sans-serif;
+}
+.contactText {
+    width: 95%;
+    margin: 0 auto;
+    background-color: #C8FFD4;
+    border-style: solid;
+    border-color: #43c05e;
+    box-shadow: 5px 10px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 90%;
+    padding: 7px;
+    text-align: center;
+}
+.contactText > a {
+    color: black;
+}
