@@ -184,6 +184,7 @@ b {
     background-color: #fe9191;
     border-color: #ff6b6b;
     border-radius: 5px;
+    color: black;
 }
 .CV-image {
     display: block;
@@ -278,4 +279,42 @@ b {
 }
 .contactText > a {
     color: black;
+}
+.contactBox {
+    margin: 8px;
+    margin-top: 20px;
+}
+.contactBox > div {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    border: none;
+    border-bottom: 1px solid #7b7b7b;
+}
+.contactBox > * {
+    margin-bottom: 5px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 90%;
+}
+.contactBox > button {
+    background-color: #ffcf87;
+    border-color: #a3a10f;
+    border-radius: 5px;
+    color: black;
+    width: auto;
+    height: 30px;
+    float: right;
+    font-size: 100%;
+}
+
+.social {
+    width: 100%;
+    background-color: #d1f2ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.social > * {
+    margin: auto;
 }
