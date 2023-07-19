@@ -17,9 +17,14 @@ function calculatePos(name) {
   const projectsLink = document.getElementsByClassName("projectsLink")[0];
   const CVLink = document.getElementsByClassName("CVLink")[0];
   const contactLink = document.getElementsByClassName("contactLink")[0];
+  const mouse = document.getElementsByClassName("mouse")[0];
   
   // Adding click event listeners to buttons
   aboutLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: aboutPos, behavior: 'smooth' });
+  });
+  mouse.addEventListener('click', (event) => {
     event.preventDefault();
     window.scrollTo({ top: aboutPos, behavior: 'smooth' });
   });
