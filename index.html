@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krzysztof's page</title>
+    <!-- <link rel="icon" type="image/x-icon" href="/images/person.png"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="taskBar">
+        <a class="aboutLink" href="#about">about</a>
+        <a class="projectsLink" href="#projects">projects</a>
+        <a class="CVLink" href="#CV">CV</a>
+        <a class="contactLink" href="#contact">contact</a>
+    </div>
+
+    <div class="title hidden">
+        <img class="title-image" src="images/profile-square.jpg">
+        <div class="title-text">
+            <h1>Hi &#128075;, I'm</h1>
+            <h1 class="name"> KRZYSZTOF MUSZYŃSKI</h1>
+            <h2>I write code</h2>
+        </div>
+        <a class="scroll-down" href="#about"></a>
+    </div>
+
+    <div class="about hidden">
+        <img class="about-image" src="images/profile-unedited.JPG">
+        
+        <div class="about-text">
+            <b>Im Krzysztof Muszyński, nice to meet you!</b>
+            <p>
+                Im a student at Łódź University of Technology majoring in Information Technology.<br><br>
+
+                I have experience working with programming languages such as C++, C#, JavaScript.
+                As well as GIT and Linux.<br><br>
+
+                Currently I continue to grow my web development skills while working on my side projects and taking part in innovative programms such as hackathons and startup incubators.
+            </p>
+        </div>
+    </div>
+
+    <div class="projects hidden">
+        <h1 class="projects-title"> MY PROJECTS</h1>
+
+        <div class="SwiftBoard">
+            <div class="SwiftBoard-text">
+                <h2 class="SwiftBoard-title">SwiftBoard</h2>
+                <p>
+                    Together with my 3 good friends,
+                    we entered a <HAcK NA ZDROWIE 2> hackathon, where we developed SwiftBoard, a platform harnessing the power of AI to streamline the onboarding process.<br><br>
+
+                    To our delight our team secured the first place at the competition and won the grand prize!<br><br>
+
+                    To achieve this, we created a web application using TypeScript and React, and seamlessly connected it to a SupaBase backend.
+                    In addition, we developed a chatbot integrated with the Chat GPT API, empowering it to provide virtual assistance.
+                    Our chatbot featured pdf and callendar recognition capabilities, enabling it to offer support based on the displayed content.
+                    <br><br>
+                    Currently, we're actively expanding SwiftBoard's capabilities, with plans to develop a minimum viable product (MVP) and conduct field tests in selected companies.
+                </p>
+            </div>
+            <img class="SwiftBoard-website-image" src="images/SwiftBoard-webside-image.png">
+        </div>
+    </div>
+
+    <div class="CV hidden">
+        <h1 class="CVTitle">CV</h1>
+        <p class="CVText">Preview my resume here or <a href="CV/Krzysztof-Muszyński-CV.pdf" target="_blank" rel="noopener noreferrer" download><button>Download pdf</button></a></p>
+        <img class="CV-image" src="CV/Krzysztof-Muszyński-CV.png">
+        <div class="img-viewer">
+            <a class="close">&times;</a>
+            <img id="preview" src="CV/Krzysztof-Muszyński-CV.png">
+        </div>
+    </div>
+
+    <div class="contact">
+        <h1 class="contactTitle">CONTACT</h1>
+        <p class="contactText">
+            Im excited to hear from you!<br>
+            If you have any inquiries or would like to discuss potential collaborations, feel free to reach out.<br>
+            Get in touch here, or shoot me an email directly at:<br>
+            <a href="mailto: KrzysztofJerzyMuszynski@gmail.com">KrzysztofJerzyMuszynski@gmail.com</a>
+        </p>
+        <div class="contactBox">
+            <div>
+                <label>First Name:</label>
+                <input type="text" placeholder="John">
+            </div>
+            <div>
+                <label>Last Name:</label>
+                <input type="text" placeholder="Doe">
+            </div>
+            <div>
+                <label>Email Adress:</label>
+                <input type="email" placeholder="JohnDoe@email.com">
+            </div>
+            <div>
+                <label>Phone Number:</label>
+                <input type="phone" placeholder="111 222 333">
+            </div>
+            <div>
+                <label>Title:</label>
+                <input type="text" placeholder="New website idea">
+            </div>
+            <div>
+                <label>Your Message:</label>
+                <textarea rows="5" type="text" placeholder="" ></textarea>
+            </div>
+            <button>Submit</button>
+        </div>
+        <div class="social">
+            <a>Linked In</a>
+            <a>GitHub</a>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
