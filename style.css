@@ -17,48 +17,62 @@
     font-style: normal;
 }
 body {
-    background-color: #224d56;
+    background-color: #000000;
     height: 100%;
+    transition: background-color 0.5s ease-in-out;
 }
 html {
     height: 100%;
 }
 
-.mouse {
-    cursor: pointer;
-	width: 50px;
-	height: 90px;
-	border: 3px solid #ffffff;
-	border-radius: 60px;
-	position: relative;
-	&::before {
-		content: '';
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: 10px;
-		left: 50%;
-		transform: translateX(-50%);
-		background-color: #ffffff;
-		border-radius: 50%;
-		opacity: 1;
-		animation: wheel 2s infinite;
-		-webkit-animation: wheel 2s infinite;
-	}
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }
 
-@keyframes wheel {
-	to {
-		opacity: 0;
-		top: 60px;
-	}
+.scroll-down {
+    /* background-color: #B1AFFF; */
+    border: solid 5px white;
+    border-radius: 30px;
+    height: 60px;
+    width: 35px;
+    position: relative;
+    margin: 0;
 }
-
-@-webkit-keyframes wheel {
-	to {
-		opacity: 0;
-		top: 60px;
-	}
+.scroll-down::before {
+    position: absolute;
+        left: calc(50% - 7px);
+        margin-top: 5px;
+        transform: translate(-50%, -50%);
+        border: solid 5px white;
+        background-color: white;
+        border-radius: 100px;
+        z-index: 999;
+        content: "";
+        width: 5px;
+        height: 5px;
+        animation: slide 3s infinite ease-in-out;
+}
+@keyframes slide {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      /* 90% {
+        transform: translateY(50px);
+        opacity: 0.7;
+      } */
+      100% {
+        transform: translateY(45px);
+        opacity: 0;
+      }
 }
 
 /* Defining task bar section */
@@ -101,7 +115,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 7vw;
+    font-size: clamp(10px, 4vw, 600px);
     /* padding: 30vh 0 30vh 0; */
     height: 100%;
     /* max-width: 1400px; */
@@ -118,6 +132,14 @@ html {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 3px;
     text-emphasis: none;
+}
+.title-text > * {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.title-text {
+    /* max-height: 400px; */
 }
 
 /* Defining the about section */

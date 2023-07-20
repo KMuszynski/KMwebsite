@@ -1,3 +1,16 @@
+// adding the effect of elements comming into view
+const observer = new IntersectionObserver((entries) =>{
+  entries.forEach((entry)=>{
+    if(entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  })
+})
+
+const hiddenElements = document.querySelectorAll('.hidden');
+
+hiddenElements.forEach((el)=> observer.observe(el));
+
 // Function returns the Y position of a section on the page
 function calculatePos(name) {
     const targetElement = document.getElementsByClassName(name)[0]; // Select the first element with the given class name
@@ -17,14 +30,14 @@ function calculatePos(name) {
   const projectsLink = document.getElementsByClassName("projectsLink")[0];
   const CVLink = document.getElementsByClassName("CVLink")[0];
   const contactLink = document.getElementsByClassName("contactLink")[0];
-  const mouse = document.getElementsByClassName("mouse")[0];
+  const scrollDown = document.getElementsByClassName("scroll-down")[0];
   
   // Adding click event listeners to buttons
   aboutLink.addEventListener('click', (event) => {
     event.preventDefault();
     window.scrollTo({ top: aboutPos, behavior: 'smooth' });
   });
-  mouse.addEventListener('click', (event) => {
+  scrollDown.addEventListener('click', (event) => {
     event.preventDefault();
     window.scrollTo({ top: aboutPos, behavior: 'smooth' });
   });
@@ -95,3 +108,31 @@ close.addEventListener('click', (event)=>{
     event.preventDefault();
     imgViewer.removeAttribute("id");
 })
+
+
+// making the background color transitions
+
+window.addEventListener('scroll', (event)=>{
+  const viewportHeight = window.innerHeight;
+  const middleOfPage = viewportHeight / 2;
+  const scrollPosition = window.scrollY + middleOfPage;
+
+    if (scrollPosition < aboutPos) {
+      document.body.style.backgroundColor = "black";
+    }
+    else if (scrollPosition >= aboutPos && scrollPosition < projectsPos) {
+      document.body.style.backgroundColor = "#18122B";
+    } 
+    else if (scrollPosition >= projectsPos && scrollPosition < CVPos) {
+      document.body.style.backgroundColor = "#393053";
+    } 
+    else if (scrollPosition >= CVPos && scrollPosition < contactPos) {
+      document.body.style.backgroundColor = "#443C68";
+    } 
+    else if (scrollPosition >= contactPos) {
+      document.body.style.backgroundColor = "#635985";
+    } 
+    else {
+      document.body.style.backgroundColor = "#18122B";
+    }
+});
