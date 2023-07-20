@@ -156,11 +156,13 @@ html {
 }
 .about-text {
     width: auto;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     color: white;
     padding: 5px;
+    margin-bottom: 20px;
 }
 .about-text > p {
     font-family: "Helvetica Neue", Arial, sans-serif;
@@ -183,7 +185,8 @@ html {
 }
 .about-image {
     display: block;
-    max-width: 50%;
+    width: 50%;
+    max-width: 300px;
     border-radius: 10px;
     margin: 0 auto;
     padding-bottom: 0px;
@@ -405,4 +408,19 @@ input {
 }
 .social > * {
     margin: auto;
+}
+
+@media only screen and (min-width: 1000px) {
+    .about {
+        flex-direction: row-reverse;
+        display: flex;
+        align-items: center;
+    }
+    .about > * {
+        margin: 0 auto;
+    }
+    .about-image {
+        
+        margin: auto auto;
+    }
 }
