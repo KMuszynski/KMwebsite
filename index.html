@@ -75,6 +75,7 @@
                 <p>
                     I took on the challenge of creating a 2-player chess game in C++ using the SFML framework,
                     combining my passion for coding and chess.<br><br>
+                    
                     This project pushed me to improve my C++ and algorithm writing skills, 
                     while learning how to build window applications with SFML. 
                 </p>
@@ -101,32 +102,35 @@
             Get in touch here, or shoot me an email directly at:<br>
             <a href="mailto: KrzysztofJerzyMuszynski@gmail.com">KrzysztofJerzyMuszynski@gmail.com</a>
         </p>
-        <div class="contactBox">
-            <div>
-                <label>First Name:</label>
-                <input type="text" placeholder="John">
+        <div class="contact-area">
+            <div class="contactBox">
+                <div>
+                    <label class="firstName">First Name:</label>
+                    <input type="text" placeholder="John">
+                </div>
+                <div>
+                    <label class="lastName">Last Name:</label>
+                    <input type="text" placeholder="Doe">
+                </div>
+                <div>
+                    <label class="emailAdress">Email Adress:</label>
+                    <input type="email" placeholder="JohnDoe@email.com">
+                </div>
+                <div>
+                    <label class="phoneNumber">Phone Number:</label>
+                    <input type="phone" placeholder="111 222 333">
+                </div>
+                <div>
+                    <label class="messageTitle">Title:</label>
+                    <input type="text" placeholder="New website idea">
+                </div>
+                <div>
+                    <label class="message">Your Message:</label>
+                    <textarea rows="5" type="text" placeholder="" ></textarea>
+                </div>
+                <button class="send">Submit</button>
             </div>
-            <div>
-                <label>Last Name:</label>
-                <input type="text" placeholder="Doe">
-            </div>
-            <div>
-                <label>Email Adress:</label>
-                <input type="email" placeholder="JohnDoe@email.com">
-            </div>
-            <div>
-                <label>Phone Number:</label>
-                <input type="phone" placeholder="111 222 333">
-            </div>
-            <div>
-                <label>Title:</label>
-                <input type="text" placeholder="New website idea">
-            </div>
-            <div>
-                <label>Your Message:</label>
-                <textarea rows="5" type="text" placeholder="" ></textarea>
-            </div>
-            <button>Submit</button>
+            <img class="contact-image" src="images/contact.png">
         </div>
         <div class="social">
             <a>Linked In</a>
@@ -136,4 +140,5 @@
 
 </body>
 <script src="script.js"></script>
+<script> src="https://smtpjs.com/v3/smtp.js"</script>
 </html>

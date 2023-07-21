@@ -4,6 +4,9 @@ const observer = new IntersectionObserver((entries) =>{
     if(entry.isIntersecting) {
       entry.target.classList.add('show');
     }
+    if(!entry.isIntersecting) {
+      entry.target.classList.remove('show');
+    }
   })
 })
 
@@ -152,4 +155,36 @@ window.addEventListener('scroll', (event)=>{
     else {
       document.body.style.backgroundColor = "#18122B";
     }
+});
+
+// connecting the contact box
+// Email.send({
+//   Host : "smtp.elasticemail.com",
+//   Username : "username",
+//   Password : "password",
+//   To : 'them@website.com',
+//   From : "you@isp.com",
+//   Subject : "This is the subject",
+//   Body : "And this is the body"
+// }).then(
+// message => alert(message)
+// );
+
+const send = document.getElementsByClassName("send")[0];
+const firstName = document.getElementsByClassName("firstName")[0];
+const lastName = document.getElementsByClassName("lastName")[0];
+const emailAdress = document.getElementsByClassName("emailAdress")[0];
+const phoneNumber = document.getElementsByClassName("phoneNumber")[0];
+const messageTitle = document.getElementsByClassName("messageTitle")[0];
+const message = document.getElementsByClassName("message")[0];
+
+const inputs = [firstName, lastName, emailAdress, phoneNumber, messageTitle, message];
+
+send.addEventListener('click', (event) => {
+  inputs.forEach(input => {
+    console.log(input.value);
+      if (input.value.trim() === "") { // Add parentheses after 'trim'
+          alert("Please fill all fields before sending a message.");
+      }
+  });
 });

@@ -250,14 +250,14 @@ html {
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 90%;
     padding: 7px;
-    background-color: #454545;
+    background-color: #454545cc;
     margin: 0;
     border-radius: 0 0 7px 7px;
     border-style: none solid solid solid;
     border-color: #000000;
 }
 .about-text > b {
-    background-color: #606060;
+    background-color: #606060c9;
     text-align: center;
     padding: 7px;
     margin: 0;
@@ -309,7 +309,7 @@ b {
     width: 95%;
     max-width: 600px;
     margin-left: 2.5%;
-    background-color: #454545;
+    background-color: #454545c4;
     color: rgb(255, 255, 255);
     border-style: solid;
     border-radius: 10px;
@@ -338,7 +338,7 @@ b {
     width: 95%;
     max-width: 600px;
     margin-left: 2.5%;
-    background-color: #454545;
+    background-color: #454545c8;
     color: rgb(255, 255, 255);
     border-style: solid;
     border-radius: 10px;
@@ -465,11 +465,14 @@ b {
 /* Defining the contact section */
 
 .contact {
-    background-color: #C8FFD4;
+    /* background-color: #C8FFD4; */
     margin-left: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+label {
+    color: black;
 }
 .contactTitle {
     width: 100%;
@@ -483,6 +486,7 @@ b {
 }
 .contactText {
     width: 95%;
+    max-width: 800px;
     margin: 0 auto;
     background-color: #C8FFD4;
     border-style: solid;
@@ -493,12 +497,19 @@ b {
     padding: 7px;
     text-align: center;
 }
-.contactText > a {
+.contactBox > a {
     color: black;
 }
 .contactBox {
     margin: 8px;
     margin-top: 20px;
+    /* margin-left: auto; */
+    width: 90%;
+    height: 360px;
+    max-width: 600px;
+    background-color: #c8ffd4a9;
+    padding: 15px;
+    border-radius: 20px;
 }
 .contactBox > div {
     display: flex;
@@ -507,6 +518,11 @@ b {
 input {
     border: none;
     border-bottom: 1px solid #7b7b7b;
+    border-radius: 5px;
+    width: 400px;
+}
+textarea {
+    border-radius: 10px;
 }
 .contactBox > * {
     margin-bottom: 5px;
@@ -522,6 +538,15 @@ input {
     height: 30px;
     float: right;
     font-size: 100%;
+}
+.contact-image {
+    display: none;
+}
+.contact-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .social {
@@ -550,11 +575,21 @@ input {
         
         /* margin: auto auto; */
     }
-    .projects > div {
+    .projects .SwiftBoard {
+        flex-direction: row-reverse;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .projects .chess {
         flex-direction: row;
         display: flex;
         align-items: center;
         margin: 0 auto;
         justify-content: center;
+    }
+    .contact-image {
+        display: flex;
     }
 }
