@@ -35,22 +35,27 @@ function calculatePos(name) {
   // Adding click event listeners to buttons
   aboutLink.addEventListener('click', (event) => {
     event.preventDefault();
+    const aboutPos = calculatePos("about");
     window.scrollTo({ top: aboutPos, behavior: 'smooth' });
   });
   scrollDown.addEventListener('click', (event) => {
     event.preventDefault();
+    const aboutPos = calculatePos("about");
     window.scrollTo({ top: aboutPos, behavior: 'smooth' });
   });
   projectsLink.addEventListener('click', (event) => {
     event.preventDefault();
+    const projectsPos = calculatePos("projects");
     window.scrollTo({ top: projectsPos, behavior: 'smooth' });
   });
   CVLink.addEventListener('click', (event) => {
     event.preventDefault();
+    const CVPos = calculatePos("CV");
     window.scrollTo({ top: CVPos, behavior: 'smooth' });
   });
   contactLink.addEventListener('click', (event) => {
     event.preventDefault();
+    const contactPos = calculatePos("contact");
     window.scrollTo({ top: contactPos, behavior: 'smooth' });
   });
 
@@ -62,7 +67,14 @@ function calculatePos(name) {
   const button4 = document.getElementsByClassName("contactLink")[0];
   // underlining the current section on the task bar
   window.addEventListener('scroll', (event)=>{
-    const scrollPosition = window.scrollY || window.pageYOffset;
+    const viewportHeight = window.innerHeight;
+    const middleOfPage = viewportHeight / 4;
+    const scrollPosition = window.scrollY + middleOfPage;
+
+    const aboutPos = calculatePos("about");
+    const projectsPos = calculatePos("projects");
+    const CVPos = calculatePos("CV");
+    const contactPos = calculatePos("contact");
     
     if (scrollPosition >= aboutPos && scrollPosition < projectsPos) {
         button1.setAttribute('id', 'button-activated');
@@ -117,17 +129,22 @@ window.addEventListener('scroll', (event)=>{
   const middleOfPage = viewportHeight / 2;
   const scrollPosition = window.scrollY + middleOfPage;
 
+  const aboutPos = calculatePos("about");
+  const projectsPos = calculatePos("projects");
+  const CVPos = calculatePos("CV");
+  const contactPos = calculatePos("contact");
+
     if (scrollPosition < aboutPos) {
       document.body.style.backgroundColor = "black";
     }
     else if (scrollPosition >= aboutPos && scrollPosition < projectsPos) {
-      document.body.style.backgroundColor = "#18122B";
+      document.body.style.backgroundColor = "white";
     } 
     else if (scrollPosition >= projectsPos && scrollPosition < CVPos) {
-      document.body.style.backgroundColor = "#393053";
+      document.body.style.backgroundColor = "green";
     } 
     else if (scrollPosition >= CVPos && scrollPosition < contactPos) {
-      document.body.style.backgroundColor = "#443C68";
+      document.body.style.backgroundColor = "red";
     } 
     else if (scrollPosition >= contactPos) {
       document.body.style.backgroundColor = "#635985";

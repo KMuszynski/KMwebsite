@@ -121,13 +121,34 @@ html {
     /* max-width: 1400px; */
 }
 .title > * {
-    margin: 0 auto;
     text-align: center;
     padding-bottom: 10px;
+    margin-top: 0;
 }
-.title > h2 {
+.title > h1 {
+    margin-bottom: 0;
+}
+.under-text {
+    height:fit-content;
+    padding: 0;
     margin-bottom: 10%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+.under-text h2 {
+    margin-top: 0;
+}
+.blinking-underscore {
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
 .name {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 3px;
@@ -156,7 +177,7 @@ html {
 }
 .about-text {
     width: auto;
-    max-width: 800px;
+    max-width: 650px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -202,6 +223,7 @@ b {
 .projects {
     /* background-color: #dcdbff; */
     margin-left: 0;
+    margin-top: 60px;
     width: 100%;
 }
 .projects-title {
@@ -212,9 +234,19 @@ b {
     border-radius: 10px;
     box-shadow: 5px 10px;
     font-family: 'Porcine', sans-serif;
+    margin-bottom: 30px;
+}
+.projects > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
 }
 .SwiftBoard-text {
     width: 95%;
+    max-width: 600px;
     margin-left: 2.5%;
     background-color: #454545;
     color: rgb(255, 255, 255);
@@ -237,6 +269,36 @@ b {
 }
 .SwiftBoard-website-image {
     width: 95%;
+    max-width: 600px;
+    margin-left: 2.5%;
+}
+
+.chess-text {
+    width: 95%;
+    max-width: 600px;
+    margin-left: 2.5%;
+    background-color: #454545;
+    color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #000000;
+    box-shadow: 5px 10px rgb(39, 39, 39);
+    margin-bottom: 20px;
+}
+.chess-text > p {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 90%;
+}
+.chess-title {
+    margin-left: 10px;
+    text-decoration: underline;
+}
+.chess-gif {
+    width: 95%;
+    max-width: 450px;
     margin-left: 2.5%;
 }
 
@@ -261,6 +323,7 @@ b {
 }
 .CVText {
     width: 95%;
+    max-width: 400px;
     margin: 0 auto;
     background-color: #ffc2b3;
     border-style: solid;
@@ -279,7 +342,8 @@ b {
 }
 .CV-image {
     display: block;
-    max-width: 65%;
+    width: 65%;
+    max-width: 500px;
     border-radius: 5px;
     margin: 0 auto;
     padding-bottom: 0px;
@@ -415,12 +479,21 @@ input {
         flex-direction: row-reverse;
         display: flex;
         align-items: center;
+        margin: 0 auto;
+        justify-content: center;
     }
     .about > * {
-        margin: 0 auto;
+        margin: 0 10px;
     }
     .about-image {
         
-        margin: auto auto;
+        /* margin: auto auto; */
+    }
+    .projects > div {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: center;
     }
 }
