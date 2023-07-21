@@ -138,16 +138,16 @@ window.addEventListener('scroll', (event)=>{
       document.body.style.backgroundColor = "black";
     }
     else if (scrollPosition >= aboutPos && scrollPosition < projectsPos) {
-      document.body.style.backgroundColor = "white";
+      document.body.style.backgroundColor = "#091f36";
     } 
     else if (scrollPosition >= projectsPos && scrollPosition < CVPos) {
-      document.body.style.backgroundColor = "green";
+      document.body.style.backgroundColor = "#0d2c4c";
     } 
     else if (scrollPosition >= CVPos && scrollPosition < contactPos) {
-      document.body.style.backgroundColor = "red";
+      document.body.style.backgroundColor = "#103862";
     } 
     else if (scrollPosition >= contactPos) {
-      document.body.style.backgroundColor = "#635985";
+      document.body.style.backgroundColor = "#144578";
     } 
     else {
       document.body.style.backgroundColor = "#18122B";
