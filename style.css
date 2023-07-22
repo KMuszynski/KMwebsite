@@ -25,6 +25,83 @@ html {
     height: 100%;
 }
 
+.background {
+    position: absolute;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #000000, #000000);
+    display: flex;
+    flex-grow: 1;
+    z-index: -1;
+}
+
+.background div {
+    position: absolute;
+    border-radius: 100%;
+    height: 0;
+    filter: blur(240vw);
+    opacity: 0.4;
+}
+
+.background div:nth-child(1) {
+    background: linear-gradient(132deg, #1FCFC3 0.00%, #1F91CF 100.00%);
+    width: 30%;
+    padding-top: 30%;
+    left: 20%;
+    top: 20%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.background div:nth-child(2) {
+    background: linear-gradient(132deg, #0800FF 0.00%, #E32BE3 100.00%);
+    width: 40%;
+    padding-top: 40%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.background div:nth-child(3) {
+    background: linear-gradient(132deg, #1FCFC3 0.00%, #1F91CF 100.00%);
+    width: 30%;
+    padding-top: 30%;
+    left: 80%;
+    top: 80%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.background div:nth-child(4) {
+    background: linear-gradient(132deg, #f2c6ff 0.00%, #1872 100.00%);
+    width: 42%;
+    padding-top: 42%;
+    left: 6%;
+    top: 93%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.background div:nth-child(5) {
+    background: linear-gradient(132deg, #5a0d40 0.00%, #10a4bf 100.00%);
+    width: 7%;
+    padding-top: 7%;
+    left: 40%;
+    top: 28%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.background div:nth-child(6) {
+    background: linear-gradient(132deg, #56b49 0.00%, #f1e64f 100.00%);
+    width: 98%;
+    padding-top: 98%;
+    left: 72%;
+    top: 45%;
+    transform: 
+}
+
+
 .hidden {
     opacity: 0;
     filter: blur(5px);
@@ -374,7 +451,8 @@ b {
 }
 .CVTitle {
     width: 100%;
-    background-color: #ffff8c;
+    /* background-color: #ffff8c; */
+    background-color: rgb(116, 162, 193);
     margin: 15px auto;
     text-align: center;
     border-style: solid;
@@ -466,18 +544,21 @@ b {
 
 .contact {
     /* background-color: #C8FFD4; */
+    background-image: linear-gradient(.45turn, #45a857, rgb(130, 54, 201));
     margin-left: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
 }
 label {
     color: black;
 }
 .contactTitle {
+    margin-top: 0;
     width: 100%;
     background-color: #79ffd2;
-    margin: 15px auto;
+    margin: 0 auto;
     text-align: center;
     border-style: solid;
     border-radius: 10px;
@@ -487,7 +568,9 @@ label {
 .contactText {
     width: 95%;
     max-width: 800px;
-    margin: 0 auto;
+    margin-top: 25px;
+    margin-left:  auto;
+    margin-right: auto;
     background-color: #C8FFD4;
     border-style: solid;
     border-color: #43c05e;
@@ -519,7 +602,7 @@ input {
     border: none;
     border-bottom: 1px solid #7b7b7b;
     border-radius: 5px;
-    width: 400px;
+    width: clamp(0px, 90%, 400px);
 }
 textarea {
     border-radius: 10px;
@@ -551,7 +634,7 @@ textarea {
 
 .social {
     width: 100%;
-    background-color: #d1f2ff;
+    background-color: rgb(148, 160, 207);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -591,5 +674,11 @@ textarea {
     }
     .contact-image {
         display: flex;
+    }
+    
+}
+@media only screen and (min-width: 700px) {
+    .taskBar {
+        font-size: 110%;
     }
 }
