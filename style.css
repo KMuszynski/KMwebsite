@@ -607,20 +607,33 @@ input {
 textarea {
     border-radius: 10px;
 }
-.contactBox > * {
-    margin-bottom: 5px;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 90%;
+form {
+    display: flex;
+    flex-direction: column;
 }
-.contactBox > button {
-    background-color: #ffcf87;
-    border-color: #a3a10f;
-    border-radius: 5px;
-    color: black;
-    width: auto;
-    height: 30px;
+form * {
+    margin: 6px;
+    min-height: 25px;
+}
+form > input {
+    border: none none solid none;
+    border-color: #000000;
+    border-width: 2px;
+}
+form > textarea {
+    border: solid;
+    border-color: #000000;
+    border-width: 2px;
+}
+form > button {
+    position: relative;
     float: right;
-    font-size: 100%;
+    width: 100px;
+    height: 32px;
+    margin: 10px auto;
+    background-color: white ;
+    border: solid gray;
+    border-radius: 10px;
 }
 .contact-image {
     display: none;

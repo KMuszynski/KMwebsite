@@ -112,33 +112,48 @@
             <a href="mailto: KrzysztofJerzyMuszynski@gmail.com">KrzysztofJerzyMuszynski@gmail.com</a>
         </p>
         <div class="contact-area">
-            <div class="contactBox">
-                <div>
-                    <label class="firstName">First Name:</label>
-                    <input type="text" placeholder="John">
+                <div class="contactBox">
+                    <form action="https://formspree.io/f/mwkdprzd" method="post">
+                        <!-- <label for="text">First Name</label> -->
+                        <input placeholder="&nbsp;First Name" name="firstName" id="firstName" type="text">
+                        <!-- <label for="text">Last Name</label> -->
+                        <input placeholder="&nbsp;Last Name" name="lastName" id="lastName" type="text">
+                        <!-- <label for="phone">Your Phone Number</label> -->
+                        <input placeholder="&nbsp;Phone Number" name="phone" id="phone" type="tel">
+                        <!-- <label for="email">Your Email</label> -->
+                        <input placeholder="&nbsp;Email Adress" name="Email" id="email" type="email">
+                        <!-- <label for="title">Message Title</label> -->
+                        <input placeholder="&nbsp;Message Title" name="title" id="title" type="text">
+                        <!-- <label for="message">Your Message</label> -->
+                        <textarea name="&nbsp;Your Message" rows="5" type="text" placeholder="Your message"></textarea>
+                        <button type="submit">Send Message</button>
+                      </form>
+                    <!-- <div>
+                        <label class="firstName">First Name:</label>
+                        <input type="text" placeholder="John">
+                    </div>
+                    <div>
+                        <label class="lastName">Last Name:</label>
+                        <input type="text" placeholder="Doe">
+                    </div>
+                    <div>
+                        <label class="emailAdress">Email Adress:</label>
+                        <input type="email" placeholder="JohnDoe@email.com">
+                    </div>
+                    <div>
+                        <label class="phoneNumber">Phone Number:</label>
+                        <input type="phone" placeholder="111 222 333">
+                    </div>
+                    <div>
+                        <label class="messageTitle">Title:</label>
+                        <input type="text" placeholder="New website idea">
+                    </div>
+                    <div>
+                        <label class="message">Your Message:</label>
+                        <textarea rows="5" type="text" placeholder="Your message" ></textarea>
+                    </div>
+                    <button class="submit">Submit</button> -->
                 </div>
-                <div>
-                    <label class="lastName">Last Name:</label>
-                    <input type="text" placeholder="Doe">
-                </div>
-                <div>
-                    <label class="emailAdress">Email Adress:</label>
-                    <input type="email" placeholder="JohnDoe@email.com">
-                </div>
-                <div>
-                    <label class="phoneNumber">Phone Number:</label>
-                    <input type="phone" placeholder="111 222 333">
-                </div>
-                <div>
-                    <label class="messageTitle">Title:</label>
-                    <input type="text" placeholder="New website idea">
-                </div>
-                <div>
-                    <label class="message">Your Message:</label>
-                    <textarea rows="5" type="text" placeholder="" ></textarea>
-                </div>
-                <button class="send">Submit</button>
-            </div>
             <img class="contact-image" src="images/contact.png">
         </div>
         <div class="social">
